@@ -21,7 +21,7 @@
 
         > ul {
             position: absolute;
-            top:px2rem(-50);
+            top: px2rem(-50);
         }
 
         .slot-icon {
@@ -33,13 +33,13 @@
             @include bg('../images/apple.png', 100);
         }
         .slot-icon-2 {
-            @include bg('../images/banana.png', 100);
+            @include bg('../images/diamond.png', 100);
         }
         .slot-icon-3 {
             @include bg('../images/coin.png', 100);
         }
         .slot-icon-4 {
-            @include bg('../images/diamond.png', 100);
+            @include bg('../images/banana.png', 100);
         }
         .slot-icon-5 {
             @include bg('../images/watermelon.png', 100);

@@ -1,16 +1,18 @@
 import './sass/main.scss';
-import Api from './api';
+import './utils/rem';
 
 import SlotGame from './js/slot';
 
 (function () {
-    // console.log(1);
-    // Api.getMobileUseful('13482437881').then(function (data) {
-    //     console.log(data);
-    // });
 
-    // alert(navigator.userAgent);
+    const slotGame = new SlotGame('#slot-game');
+    // slotGame.resetGame();
 
-    const slotGame = new SlotGame();
-    slotGame.resetGame();
+
+    $('button').bind('touchend', function (e) {
+        slotGame.startGame('',function () {
+            alert(1)
+        });
+    })
+
 })();
