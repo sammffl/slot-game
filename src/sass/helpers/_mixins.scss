@@ -1,5 +1,17 @@
-@mixin background($img:file, $type:png, $repeat:no-repeat, $x:0, $y:0) {
-    background-image: url(../images/#{$img}.#{$type});
-    background-repeat: #{$repeat};
-    background-position: #{$x}px #{$y}px;
+@import "./functions";
+
+@mixin bg($url, $height) {
+    height: px2rem($height);
+    background: url($url) no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin prefix($k, $v...) {
+    #{$k}: $v;
+    -webkit-#{$k}: $v;
+}
+
+@mixin prefixv($k, $v) {
+    #{$k}: $v;
+    #{$k}: -webkit-#{$v};
 }

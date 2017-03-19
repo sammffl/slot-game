@@ -4,7 +4,9 @@ var webpack = require('webpack'),
     ip = require('ip'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ROOT_PATH = path.resolve(__dirname),
+    nodeModulesPath = path.resolve(__dirname, "node_modules"),
     APP_PATH = path.resolve(ROOT_PATH, 'src/js/main');
+
 
 module.exports = {
     context: __dirname,
@@ -51,9 +53,9 @@ module.exports = {
             template: "./index.html",
         }),
         new ExtractTextPlugin('[name].css'),
-        // new webpack.ProvidePlugin({
-        //     $: "jquery",
-        // }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
@@ -66,4 +68,10 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('mock')
         })
     ],
+    resolve: {
+        extensions: ["", ".js", ".jsx", ".es6", "css", "scss", "png", "jpg", "jpeg"],
+        alias: {
+            "jquery": path.join(nodeModulesPath, "/jquery/dist/jquery.min"),
+        },
+    },
 }
