@@ -27,22 +27,24 @@
         .slot-icon {
             width: px2rem(100);
             height: px2rem(100);
+            line-height: px2rem(100);
+            text-align: center;
         }
 
-        .slot-icon-1 {
-            @include bg('../images/apple.png', 100);
-        }
-        .slot-icon-2 {
-            @include bg('../images/diamond.png', 100);
-        }
-        .slot-icon-3 {
-            @include bg('../images/coin.png', 100);
-        }
-        .slot-icon-4 {
-            @include bg('../images/banana.png', 100);
-        }
-        .slot-icon-5 {
-            @include bg('../images/watermelon.png', 100);
-        }
+        //.slot-icon-1 {
+        //    @include bg('../images/apple.png', 100);
+        //}
+        //.slot-icon-2 {
+        //    @include bg('../images/diamond.png', 100);
+        //}
+        //.slot-icon-3 {
+        //    @include bg('../images/coin.png', 100);
+        //}
+        //.slot-icon-4 {
+        //    @include bg('../images/banana.png', 100);
+        //}
+        //.slot-icon-5 {
+        //    @include bg('../images/watermelon.png', 100);
+        //}
     }
 }
