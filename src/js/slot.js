@@ -6,20 +6,6 @@ let awardList = {};
 let prizeCount = 8;
 let isSync = false;
 let time = 2000;
-
-const liContent = '<ul>' +
-    '<li class="slot-icon-1 slot-icon" data-number="0">1</li>' +
-    '<li class="slot-icon-2 slot-icon" data-number="1">2</li>' +
-    '<li class="slot-icon-3 slot-icon" data-number="2">3</li>' +
-    '<li class="slot-icon-4 slot-icon" data-number="3">4</li>' +
-    '<li class="slot-icon-5 slot-icon" data-number="4">5</li>' +
-    '<li class="slot-icon-6 slot-icon" data-number="5">6</li>' +
-    '<li class="slot-icon-7 slot-icon" data-number="6">7</li>' +
-    '<li class="slot-icon-8 slot-icon" data-number="7">8</li>' +
-    '<li class="slot-icon-9 slot-icon" data-number="8">9</li>' +
-    '</ul>';
-
-
 let $container;
 let isRunning = false;
 
@@ -38,9 +24,7 @@ export default class SlotGame {
     }
 
     _init() {
-
-        console.log(prizeCount, time, isSync);
-
+        // console.log(prizeCount, time, isSync);
         this._reset();
     }
 
@@ -81,7 +65,6 @@ export default class SlotGame {
     _calFinalResult(prize) {
         const self = this;
         let result = '';
-        // let slotArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         let slotArr = [];
         for (let i = 0, max = prizeCount; i < max; i++) {
             slotArr.push(i + 1);
@@ -148,6 +131,9 @@ export default class SlotGame {
     startGame(prize = 'noPrize', callback) {
         if (isRunning) {
             return false;
+        }
+        if (prize > prizeCount) {
+            prize = 'noPrize';
         }
 
         isRunning = true;
