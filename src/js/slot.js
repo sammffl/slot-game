@@ -3,7 +3,7 @@
  */
 
 let awardList = {};
-let prizeCount = 8;
+let prizeCount = 10;
 let isSync = false;
 let time = 2000;
 let $container;
@@ -16,15 +16,24 @@ export default class SlotGame {
      */
     constructor(container, props) {
         $container = $(container);
-        awardList = props.awardList;
         props.prizeNum && ( prizeCount = props.prizeNum);
         props.isSync && (isSync = props.isSync);
         props.time && (time = props.time);
-        this._init();
+
+        this._init(props);
     }
 
     _init() {
-        // console.log(prizeCount, time, isSync);
+        let double = [];
+        for (let i = 1; i <= prizeCount; i++) {
+            double.push(`${i}_X_${i}`);
+            double.push(`${i}_${i}_X`);
+            double.push(`X_${i}_${i}`);
+            awardList[i] = [`${i}_${i}_${i}`];
+        }
+
+        awardList.double = double;
+        console.log(awardList);
         this._reset();
     }
 

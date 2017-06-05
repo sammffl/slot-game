@@ -44,6 +44,7 @@
     },
     "dependencies": {
         "jquery": "^3.1.1",
-        "reqwest": "^2.0.5"
+        "reqwest": "^2.0.5",
+        "slot-game-js": "^0.2.0"
     }
 }
