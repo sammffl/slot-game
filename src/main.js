@@ -1,9 +1,9 @@
 import './sass/main.scss';
 import './utils/rem';
 
-import SlotGame from './js/slot';
+// import SlotGame from './js/slot';
+import SlotGame from 'slot-game-js';
 
-import test from 'slot-game-js';
 
 (function () {
 
@@ -24,13 +24,26 @@ import test from 'slot-game-js';
         // });
 
 
-        t.startGame('12',function(){
-            console.log(1)
-        })
+        t.startGame('', function () {
+
+        });
     });
 
 
-    const t = new test('#slot-game', slotProps);
+    const t = new SlotGame('#slot-game', slotProps);
 
+    debugger;
+
+    let result;
+    for (let i = 0; i < 10000; i++) {
+        result = t._calFinalResult('double');
+        console.log(result);
+        result = result.split('_');
+        let a = result[0], b = result[1], c = result[2];
+
+        if (a == b && b == c) {
+            debugger;
+        }
+    }
 
 })();

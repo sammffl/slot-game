@@ -32,7 +32,7 @@
         "html-loader": "^0.4.4",
         "html-webpack-plugin": "^2.25.0",
         "ip": "^1.1.4",
-        "node-sass": "^4.5.0",
+        "node-sass": "^4.5.3",
         "postcss-loader": "^1.2.1",
         "sass-loader": "^4.1.1",
         "style-loader": "^0.13.1",
@@ -45,6 +45,6 @@
     "dependencies": {
         "jquery": "^3.1.1",
         "reqwest": "^2.0.5",
-        "slot-game-js": "^0.2.0"
+        "slot-game-js": "^0.3.0"
     }
 }
