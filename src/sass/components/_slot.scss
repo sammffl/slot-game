@@ -1,9 +1,11 @@
 @import '../helpers/functions';
 @import "../helpers/mixins";
 
+$itemWidth: 100;
+
 #slot-game {
-    width: px2rem(300);
-    height: px2rem(200);
+    width: px2rem($itemWidth*3);
+    height: px2rem($itemWidth*2);
     background-color: aliceblue;
     @include prefixv(display, flex);
     @include prefix(flex-flow, row wrap);
@@ -21,13 +23,13 @@
 
         > ul {
             position: absolute;
-            top: px2rem(-50);
+            top: px2rem(-$itemWidth/2);
         }
 
         .slot-icon {
-            width: px2rem(100);
-            height: px2rem(100);
-            line-height: px2rem(100);
+            width: px2rem($itemWidth);
+            height: px2rem($itemWidth);
+            line-height: px2rem($itemWidth);
             text-align: center;
         }
 

@@ -8,7 +8,7 @@ import SlotGame from 'slot-game-js';
 (function () {
 
     const slotProps = {
-        prizeNum: 11,// 滚动显示奖品的数量
+        prizeNum: 12,// 滚动显示奖品的数量
         isSync: true,// 老虎机动画是否同步进行
         time: 2000,
     };
@@ -24,7 +24,7 @@ import SlotGame from 'slot-game-js';
         // });
 
 
-        t.startGame('', function () {
+        t.startGame('13', function () {
 
         });
     });
@@ -32,18 +32,18 @@ import SlotGame from 'slot-game-js';
 
     const t = new SlotGame('#slot-game', slotProps);
 
-    debugger;
+    // debugger;
 
-    let result;
-    for (let i = 0; i < 10000; i++) {
-        result = t._calFinalResult('double');
-        console.log(result);
-        result = result.split('_');
-        let a = result[0], b = result[1], c = result[2];
-
-        if (a == b && b == c) {
-            debugger;
-        }
-    }
+    // let result;
+    // for (let i = 0; i < 10000; i++) {
+    //     result = t._calFinalResult('double');
+    //     console.log(result);
+    //     result = result.split('_');
+    //     let a = result[0], b = result[1], c = result[2];
+    //
+    //     if (a == b && b == c) {
+    //         // debugger;
+    //     }
+    // }
 
 })();
